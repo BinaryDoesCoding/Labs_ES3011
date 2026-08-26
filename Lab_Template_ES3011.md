@@ -12,22 +12,19 @@ header-includes:
 
 ## Summary
 
-For this extra credit activity, we implemented and compared three forward kinematics odometry update methods for the Romi: first-order Euler, second-order midpoint, and ICC arc integration. The goal was to compare how each FK algorithm affected the robot's estimated path during a drive-to-point test.
+something
 
 ## Methods
 
-We modified the kinematics code so that `UpdatePoseFromOdometry()` could be switched between the three FK algorithms by commenting and uncommenting one define at the top of `kinematics.cpp`. This let us run the same drive-to-point style test with first-order Euler, second-order midpoint, and ICC without changing the rest of the robot state machine.
+something
 
 ```cpp
-// Uncomment exactly one odometry version.
-#define ODOM_USE_FIRST_ORDER
-//#define ODOM_USE_SECOND_ORDER
-//#define ODOM_USE_ICC
+code and shit
 ```
 
 The main odometry function then selects the active implementation based on that define.
 
-```cpp
+```m
 %% Jefferson E Gonzalez
 
 clear;
@@ -65,12 +62,12 @@ polynomial = s^4 + 3*s^3 - 15*s^2 - 2*s + 9;
 polynomial_roots = zero(polynomial);
 ```
 
-For the experiment, we ran the same drive-to-point style test three times, once for each FK method. During each run, the Romi printed Teleplot and CSV data for the encoder-based odometry estimate and the simulated command-based estimate. The recorded data included real position, simulated position, real heading, simulated heading, position error, and heading error. The final comparison used the last CSV row before the robot transitioned into searching or AprilTag alignment so that the comparison stayed focused on the dead-reckoning portion of the run.
+other shit
 
 ## Results
 
 
-### Table 1. Final FK Comparison Data
+### Table 1. example
 
 | FK Algorithm | Time Before Transition (ms) | Real X (cm) | Real Y (cm) | Sim X (cm) | Sim Y (cm) | X Error (cm) | Y Error (cm) | Position Error (cm) | Theta Error (rad) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
