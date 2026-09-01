@@ -1,6 +1,6 @@
 ---
 title: "ES 3011 Lab 1"
-author: "xxx xxx xxx"
+author: "Maddox Burdon, Jefferson E Gonzalez"
 date: "A-Term 2026"
 geometry: margin=1.25in
 fontsize: 11pt
