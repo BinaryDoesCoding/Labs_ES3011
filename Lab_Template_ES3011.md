@@ -68,11 +68,15 @@ Retrieved 2026-08-31, License - CC BY-SA 4.0
 
 ![image](sine_plot.png)
 
-**Figure 1.** abcde..
+**Figure 1.** 10 second sine wave plot
+
+![image](surface_example.png)
+
+**Figure 2.** Surface plot of z=x^2+y^2 using meshgrid
 
 ## Conclusion
 
-The lab utilized MATLAB to perform operations on vectors, matrices, and equations as well as plotting functions in both 2D and 3D. Specifically, part A demonstrated how to perform matrix addition and multiplication while part B used 2D plots ... to be continued
+The lab utilized MATLAB to perform operations on vectors, matrices, and equations as well as plotting functions in both 2D and 3D. Specifically, part A demonstrated how to perform matrix addition and multiplication while part B used 2D plots for a 10 second sine wave. Part C introduced 3D plots using the "meshgrid" and "surf" functions. Finally, part D showed how to find the roots of polynomials in frequency domain functions. Overall, the lab developed particular skills in MATLAB that will be needed for future labs and control engineering in general.
 
 ## Contribution Table
 
