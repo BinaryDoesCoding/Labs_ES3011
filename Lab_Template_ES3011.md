@@ -60,7 +60,13 @@ polynomial_roots = zero(polynomial);
 
 ### Figures
 
-![First Order FK Teleplot](images/first_order_fk.png)
+<!--
+Source - https://stackoverflow.com/q/41604263
+Posted by zjffdu, modified by community. See post 'Timeline' for change history
+Retrieved 2026-08-31, License - CC BY-SA 4.0
+-->
+
+![image](sine_plot.png)
 
 **Figure 1.** abcde..
 
