@@ -1,38 +1,77 @@
-%% Jefferson E Gonzalez
+%% ES 3011 - Lab 1
+% Authors: Jefferson E. Gonzalez Campos and Maddox Burdon
+% A-Term 2026
+% This script demonstrates basic MATLAB operations used in ES 3011,
+% including matrix operations, 2-D plotting, 3-D surface plotting,
+% and determining the roots of a polynomial.
 
 clear;
 clc;
 close all;
 
-random_matrix = rand(3,3);
-ic_matrix = eye(3);
-in_vector = [2; 5; 9];
-result_vector = (random_matrix + ic_matrix) * in_vector;
+%% Part A - Matrix Operations
+% Generate a 3-by-3 matrix containing random values between 0 and 1.
+random_matrix = rand(3, 3);
 
+% Create a 3-by-3 identity matrix.
+identity_matrix = eye(3);
+
+% Define the column vector specified in the lab.
+input_vector = [2; 5; 9];
+
+% Add the random and identity matrices, then multiply the result
+% by the input vector.
+result_vector = (random_matrix + identity_matrix) * input_vector;
+
+%% Part B - Two-Dimensional Plot
+% Create a time vector from 0 to 10 seconds with a 0.01-second step.
 time = 0:0.01:10;
+
+% Evaluate y = sin(t) at each value in the time vector.
 sine_output = sin(time);
 
+% Plot the sine function as a function of time.
 figure;
 plot(time, sine_output);
-xlabel('Time (s)');
-ylabel('y = sin(t)');
-title('lab 1 part b');
 
-x_values = linspace(-3,3,100);
-y_values = linspace(-1,5,100);
-[x_grid,y_grid] = meshgrid(x_values,y_values);
+% Label the axes and provide a descriptive figure title.
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('Sine Function, y = sin(t)');
+grid on;
+
+%% Part C - Three-Dimensional Surface Plot
+% Define evenly spaced x-values from -3 to 3.
+x_values = linspace(-3, 3, 100);
+
+% Define evenly spaced y-values from -1 to 5.
+y_values = linspace(-1, 5, 100);
+
+% Convert the x- and y-coordinate vectors into coordinate matrices
+% for evaluation over a two-dimensional domain.
+[x_grid, y_grid] = meshgrid(x_values, y_values);
+
+% Evaluate z = x^2 + y^2 at every point in the coordinate grid.
 surface_z = x_grid.^2 + y_grid.^2;
 
+% Create the three-dimensional surface plot.
 figure;
 surf(x_grid, y_grid, surface_z);
+
+% Label all three axes and provide a descriptive figure title.
 xlabel('x');
 ylabel('y');
 zlabel('z');
-title('z = x^2 + y^2');
+title('Surface Plot of z = x^2 + y^2');
 
+%% Part D - Polynomial Roots
+% Define s as the transfer-function variable used to represent
+% the fourth-order polynomial.
 s = tf('s');
+
+% Define the polynomial:
+% s^4 + 3s^3 - 15s^2 - 2s + 9.
 polynomial = s^4 + 3*s^3 - 15*s^2 - 2*s + 9;
+
+% Determine the zeros (roots) of the polynomial.
 polynomial_roots = zero(polynomial);
-
-
-
