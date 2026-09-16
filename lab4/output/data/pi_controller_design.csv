@@ -1,0 +1,3 @@
+controller_name,damping_ratio,natural_frequency,time_constant,kp,ki
+Underdamped,0.707,2.82885431400283,0.5,18,40.0120836492621
+Critically Damped,1,2,0.5,18,20
